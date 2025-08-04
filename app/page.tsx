@@ -1,44 +1,42 @@
 import Image from "next/image";
 import RevealAnimation from "./components/RevealAnimation";
+import { Zap, Package, Rocket, Users, Calendar, ArrowRight, Check, BarChart3, Target } from "lucide-react";
 
 export default function Home() {
 	return (
-		<div className="bg-slate-50 dark:bg-slate-900 min-h-screen">
+		<div className="bg-[#FDFDFD] min-h-screen font-['Nunito_Sans']" style={{fontFamily: 'Nunito Sans, sans-serif'}}>
 			{/* Navigation */}
 			<nav className="top-0 z-50 fixed w-full nav-glass">
-				<div className="mx-auto px-6 py-4 container">
+				<div className="mx-auto px-6 py-4 max-w-3xl">
 					<div className="flex justify-between items-center">
 						<div className="flex items-center space-x-2">
-							<div className="bg-blue-500 rounded-lg w-8 h-8 animate-float logo-glow"></div>
-							<span className="font-bold text-blue-600 text-2xl">
+							<div className="bg-[#2c5688] rounded-lg w-8 h-8 animate-float"></div>
+							<span className="font-extrabold text-[#2c5688] text-2xl">
 								TideTech.ai
 							</span>
 						</div>
 						<div className="hidden md:flex items-center space-x-8">
 							<a
 								href="#work"
-								className="font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 transition-colors"
+								className="font-semibold text-[#30313D] hover:text-[#2c5688] transition-colors text-lg"
 							>
 								Our Work
 							</a>
 							<a
 								href="#process"
-								className="font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 transition-colors"
+								className="font-semibold text-[#30313D] hover:text-[#2c5688] transition-colors text-lg"
 							>
 								Process
 							</a>
 							<a
 								href="#pricing"
-								className="font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 transition-colors"
+								className="font-semibold text-[#30313D] hover:text-[#2c5688] transition-colors text-lg"
 							>
 								Pricing
 							</a>
-							<a
-								href="#contact"
-								className="px-6 py-2 rounded-full font-medium btn-primary"
-							>
+							<button className="bg-[#2c5688] text-white px-5 py-3 rounded-xl font-extrabold text-[17px] hover:scale-95 transition-transform duration-200">
 								Talk with us
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -46,151 +44,116 @@ export default function Home() {
 
 			{/* Hero Section */}
 			<section className="px-6 pt-40 pb-32">
-				<div className="mx-auto text-center container">
+				<div className="mx-auto text-center max-w-3xl">
 					<RevealAnimation>
-						<h1 className="mb-6 font-bold text-high-contrast text-5xl md:text-7xl leading-tight">
-							Build your <span className="text-blue-600">AI Agent</span>
+						<h1 className="mb-6 font-extrabold text-[#30313D] leading-none" style={{fontSize: '52px', letterSpacing: '-0.4px'}}>
+							Build your{' '}
+							<span className="relative inline-block">
+								<span className="absolute inset-0 bg-[#2c5688] transform -rotate-1 rounded-lg"></span>
+								<span className="relative text-white px-3 py-1">AI Agent</span>
+							</span>
 							<br />
-							in weeks, not months
+							in weeks,{' '}
+							<span className="text-[#67768c]">not months</span>
 						</h1>
 					</RevealAnimation>
 					<RevealAnimation delay={0.2}>
-						<p className="mx-auto mb-8 max-w-3xl text-medium-contrast text-xl md:text-2xl">
-							Transform your business with custom AI agents and automation.
-							Fast, intelligent, and seamlessly integrated.
+						<p className="mx-auto mb-8 max-w-2xl text-[#67768c] font-semibold" style={{fontSize: '1.25rem', lineHeight: '1.4'}}>
+							Transform your business with custom AI agents and automation. Fast, intelligent, and seamlessly integrated.
 						</p>
 					</RevealAnimation>
 					<RevealAnimation delay={0.4}>
 						<div className="flex sm:flex-row flex-col justify-center gap-4 mb-16">
-							<a
-								href="#contact"
-								className="px-8 py-4 rounded-full font-medium text-lg btn-primary"
-							>
+							<button className="bg-[#2c5688] text-white px-5 py-3 rounded-xl font-extrabold hover:scale-95 transition-transform duration-200" style={{fontSize: '17px'}}>
 								Start Your AI Journey
-							</a>
-							<a
-								href="#work"
-								className="px-8 py-4 rounded-full font-medium text-lg btn-secondary"
-							>
+							</button>
+							<button className="bg-[#E2E8F0] text-[#1A202C] px-5 py-3 rounded-xl font-extrabold hover:scale-95 transition-transform duration-200" style={{fontSize: '17px'}}>
 								See Our Work
-							</a>
+							</button>
 						</div>
 					</RevealAnimation>
 
 					{/* Trust Indicators */}
 					<RevealAnimation delay={0.6}>
-						<div className="mb-8 font-medium text-slate-500 dark:text-slate-400 text-sm">
-							Founders from Google, Y Combinator, TikTok, Patreon, Bank of
-							America, PwC, Web3 & AI startups trusted us to deliver
+						<div className="mb-8 font-semibold text-[#67768c]" style={{fontSize: '1.25rem'}}>
+							<span className="text-[#67768c]">Founders from</span> Google, Y Combinator, TikTok, Patreon, Bank of America, PwC, Web3 & AI startups <span className="text-[#67768c]">trusted us to deliver</span>
 						</div>
 						<div className="flex flex-wrap justify-center items-center gap-8 opacity-60 hover:opacity-80 transition-opacity duration-500">
-							<div className="font-bold text-slate-400 text-xl">Google</div>
-							<div className="font-bold text-slate-400 text-xl">
+							<div className="font-bold text-[#67768c] text-xl">Google</div>
+							<div className="font-bold text-[#67768c] text-xl">
 								Y Combinator
 							</div>
-							<div className="font-bold text-slate-400 text-xl">TikTok</div>
-							<div className="font-bold text-slate-400 text-xl">
+							<div className="font-bold text-[#67768c] text-xl">TikTok</div>
+							<div className="font-bold text-[#67768c] text-xl">
 								Bank of America
 							</div>
-							<div className="font-bold text-slate-400 text-xl">PwC</div>
-							<div className="font-bold text-slate-400 text-xl">Patreon</div>
+							<div className="font-bold text-[#67768c] text-xl">PwC</div>
+							<div className="font-bold text-[#67768c] text-xl">Patreon</div>
 						</div>
 					</RevealAnimation>
 				</div>
 			</section>
 
 			{/* Value Proposition */}
-			<section id="work" className="section-bg-light px-6 section-padding">
-				<div className="mx-auto container">
+			<section id="work" className="bg-white px-6 py-20">
+				<div className="mx-auto max-w-3xl">
 					<RevealAnimation>
 						<div className="mb-20 text-center">
-							<h2 className="mb-6 font-bold text-high-contrast text-4xl md:text-5xl">
+							<h2 className="mb-6 font-bold text-[#30313D]" style={{fontSize: '1.875rem'}}>
 								Stuck with manual processes? Let's automate them
 							</h2>
 						</div>
 					</RevealAnimation>
-					<div className="gap-8 grid md:grid-cols-2 lg:grid-cols-3">
+					<div className="gap-3 grid md:grid-cols-2">
 						<RevealAnimation delay={0.1}>
-							<div className="p-8 rounded-2xl glass dark:glass-dark card-hover">
-								<div className="flex justify-center items-center bg-blue-100 dark:bg-blue-900 mb-4 rounded-lg w-12 h-12">
-									<span className="text-2xl">🚀</span>
+							<div className="p-6 rounded-xl bg-white border-2 border-[#E2E8F0] hover:scale-105 transition-transform duration-200">
+								<div className="flex items-center mb-3">
+									<Zap className="text-[#2c5688] mr-2" size={24} />
+									<h3 className="font-bold text-[#30313D] text-lg">
+										Rapid development:
+									</h3>
 								</div>
-								<h3 className="mb-3 font-bold text-high-contrast text-xl">
-									Rapid deployment
-								</h3>
-								<p className="text-medium-contrast">
-									Your AI agent ready in 2-4 weeks. From concept to production
-									deployment.
+								<p className="text-[#67768c] font-semibold text-lg">
+									Your AI agent ready in 2-4 weeks.
 								</p>
 							</div>
 						</RevealAnimation>
 						<RevealAnimation delay={0.2}>
-							<div className="p-8 rounded-2xl glass dark:glass-dark card-hover">
-								<div className="flex justify-center items-center bg-blue-100 dark:bg-blue-900 mb-4 rounded-lg w-12 h-12">
-									<span className="text-2xl">🤖</span>
+							<div className="p-6 rounded-xl bg-white border-2 border-[#E2E8F0] hover:scale-105 transition-transform duration-200">
+								<div className="flex items-center mb-3">
+									<Package className="text-[#2c5688] mr-2" size={24} />
+									<h3 className="font-bold text-[#30313D] text-lg">
+										Complete package:
+									</h3>
 								</div>
-								<h3 className="mb-3 font-bold text-high-contrast text-xl">
-									Complete AI solution
-								</h3>
-								<p className="text-medium-contrast">
-									Custom AI agents, automation workflows, and integrations.
-									Everything you need to transform your operations.
+								<p className="text-[#67768c] font-semibold text-lg">
+									AI agent and automation included. Everything you need to transform your operations.
 								</p>
 							</div>
 						</RevealAnimation>
 						<RevealAnimation delay={0.3}>
-							<div className="p-8 rounded-2xl glass dark:glass-dark card-hover">
-								<div className="flex justify-center items-center bg-blue-100 dark:bg-blue-900 mb-4 rounded-lg w-12 h-12">
-									<span className="text-2xl">⚡</span>
+							<div className="p-6 rounded-xl bg-white border-2 border-[#E2E8F0] hover:scale-105 transition-transform duration-200">
+								<div className="flex items-center mb-3">
+									<Rocket className="text-[#2c5688] mr-2" size={24} />
+									<h3 className="font-bold text-[#30313D] text-lg">
+										Modern technology:
+									</h3>
 								</div>
-								<h3 className="mb-3 font-bold text-high-contrast text-xl">
-									Cutting-edge technology
-								</h3>
-								<p className="text-medium-contrast">
-									We use the latest AI models and frameworks to ensure your
-									solution is intelligent, fast, and scalable.
+								<p className="text-[#67768c] font-semibold text-lg">
+									We use the latest technologies to ensure your product is fast, stable, and scalable.
 								</p>
 							</div>
 						</RevealAnimation>
 						<RevealAnimation delay={0.4}>
-							<div className="p-8 rounded-2xl glass dark:glass-dark card-hover">
-								<div className="flex justify-center items-center bg-blue-100 dark:bg-blue-900 mb-4 rounded-lg w-12 h-12">
-									<span className="text-2xl">👥</span>
+							<div className="p-6 rounded-xl bg-white border-2 border-[#E2E8F0] hover:scale-105 transition-transform duration-200">
+								<div className="flex items-center mb-3">
+									<Users className="text-[#2c5688] mr-2" size={24} />
+									<h3 className="font-bold text-[#30313D] text-lg">
+										Experienced team:
+									</h3>
 								</div>
-								<h3 className="mb-3 font-bold text-high-contrast text-xl">
-									Expert team
-								</h3>
-								<p className="text-medium-contrast">
-									We know AI inside out thanks to years of experience building
-									successful AI-powered products.
-								</p>
-							</div>
-						</RevealAnimation>
-						<RevealAnimation delay={0.5}>
-							<div className="p-8 rounded-2xl glass dark:glass-dark card-hover">
-								<div className="flex justify-center items-center bg-blue-100 dark:bg-blue-900 mb-4 rounded-lg w-12 h-12">
-									<span className="text-2xl">🔄</span>
-								</div>
-								<h3 className="mb-3 font-bold text-high-contrast text-xl">
-									Seamless integration
-								</h3>
-								<p className="text-medium-contrast">
-									Built-in integrations with your existing tools, databases, and
-									workflows.
-								</p>
-							</div>
-						</RevealAnimation>
-						<RevealAnimation delay={0.6}>
-							<div className="p-8 rounded-2xl glass dark:glass-dark card-hover">
-								<div className="flex justify-center items-center bg-blue-100 dark:bg-blue-900 mb-4 rounded-lg w-12 h-12">
-									<span className="text-2xl">📈</span>
-								</div>
-								<h3 className="mb-3 font-bold text-high-contrast text-xl">
-									Performance optimized
-								</h3>
-								<p className="text-medium-contrast">
-									Built for scale with monitoring, analytics, and continuous
-									improvement.
+								<p className="text-[#67768c] font-semibold text-lg">
+									We know what we're doing thanks to having years of experience building successful startups.
 								</p>
 							</div>
 						</RevealAnimation>
@@ -199,57 +162,67 @@ export default function Home() {
 			</section>
 
 			{/* Process */}
-			<section id="process" className="px-6 section-padding">
-				<div className="mx-auto container">
+			<section id="process" className="px-6 py-20">
+				<div className="mx-auto max-w-3xl">
 					<RevealAnimation>
 						<div className="mb-20 text-center">
-							<h2 className="mb-6 font-bold text-high-contrast text-4xl md:text-5xl">
+							<h2 className="mb-6 font-bold text-[#30313D]" style={{fontSize: '1.875rem'}}>
 								Our process - it's simple!
 							</h2>
 						</div>
 					</RevealAnimation>
-					<div className="gap-12 grid md:grid-cols-3 mx-auto max-w-5xl">
-						<RevealAnimation delay={0.2} direction="left">
-							<div className="text-center">
-								<div className="flex justify-center items-center bg-blue-500 shadow-lg mx-auto mb-6 rounded-full w-16 h-16 font-bold text-white text-2xl">
-									1
-								</div>
-								<h3 className="mb-4 font-bold text-high-contrast text-2xl">
-									Discovery
-								</h3>
-								<p className="text-medium-contrast">
-									We analyze your processes and create a detailed AI automation
-									strategy.
-								</p>
+					<ul className="max-w-xl mt-8 space-y-8">
+						<li className="relative flex items-start">
+							<div className="-ml-0.5 absolute mt-0.5 top-14 left-8 w-px border-l-4 border-dotted border-gray-300 h-full" aria-hidden="true"></div>
+							<div className="relative flex items-center justify-center flex-shrink-0 w-16 h-16 bg-white rounded-full shadow">
+								<svg className="w-10 h-10 text-fuchsia-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" stroke="#2c5688">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M416 221.25V416a48 48 0 0 1-48 48H144a48 48 0 0 1-48-48V96a48 48 0 0 1 48-48h98.75a32 32 0 0 1 22.62 9.37l141.26 141.26a32 32 0 0 1 9.37 22.62z"></path>
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M256 56v120a32 32 0 0 0 32 32h120"></path>
+								</svg>
 							</div>
-						</RevealAnimation>
-						<RevealAnimation delay={0.4}>
-							<div className="text-center">
-								<div className="flex justify-center items-center bg-blue-500 shadow-lg mx-auto mb-6 rounded-full w-16 h-16 font-bold text-white text-2xl">
-									2
-								</div>
-								<h3 className="mb-4 font-bold text-high-contrast text-2xl">
-									Development
-								</h3>
-								<p className="text-medium-contrast">
-									Watch your AI agent take shape with regular demos and updates.
-								</p>
+							<div className="ml-6">
+								<h3 className="text-lg font-bold text-[#30313D]">Specification</h3>
+								<p className="text-lg mt-1 font-semibold text-[#67768c]">We discuss your idea and create a detailed specification.</p>
 							</div>
-						</RevealAnimation>
-						<RevealAnimation delay={0.6} direction="right">
-							<div className="text-center">
-								<div className="flex justify-center items-center bg-blue-500 shadow-lg mx-auto mb-6 rounded-full w-16 h-16 font-bold text-white text-2xl">
-									3
-								</div>
-								<h3 className="mb-4 font-bold text-high-contrast text-2xl">
-									Launch
-								</h3>
-								<p className="text-medium-contrast">
-									We deploy your AI solution and provide training so you can run
-									it confidently.
-								</p>
+						</li>
+						<li className="relative flex items-start">
+							<div className="-ml-0.5 absolute mt-0.5 top-14 left-8 w-px border-l-4 border-dotted border-gray-300 h-full" aria-hidden="true"></div>
+							<div className="relative flex items-center justify-center flex-shrink-0 w-16 h-16 bg-white rounded-full shadow">
+								<svg className="w-9 h-9 text-fuchsia-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#2c5688">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M4 2C2.8 3.7 2 5.7 2 8"></path>
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M22 8c0-2.3-.8-4.3-2-6"></path>
+								</svg>
 							</div>
-						</RevealAnimation>
+							<div className="ml-6">
+								<h3 className="text-lg font-bold text-[#30313D]">Development</h3>
+								<p className="text-lg mt-1 font-semibold text-[#67768c]">Watch your AI agent take shape with regular updates.</p>
+							</div>
+						</li>
+						<li className="relative flex items-start">
+							<div className="relative flex items-center justify-center flex-shrink-0 w-16 h-16 bg-white rounded-full shadow">
+								<svg className="w-9 h-9 text-fuchsia-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#2c5688">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+								</svg>
+							</div>
+							<div className="ml-6">
+								<h3 className="text-lg font-bold text-[#30313D]">Launch</h3>
+								<p className="text-lg mt-1 font-semibold text-[#67768c]">We deploy your product and provide training so that you have full confidence in running it on your own.</p>
+							</div>
+						</li>
+					</ul>
+					<div className="flex sm:flex-row flex-col justify-center gap-4 mt-16">
+						<button className="bg-[#2c5688] text-white px-5 py-3 rounded-xl font-extrabold hover:scale-95 transition-transform duration-200 flex items-center gap-2" style={{fontSize: '17px'}}>
+							<Calendar size={20} />
+							Book a call
+						</button>
+						<button className="bg-[#E2E8F0] text-[#1A202C] px-5 py-3 rounded-xl font-extrabold hover:scale-95 transition-transform duration-200" style={{fontSize: '17px'}}>
+							See pricing
+						</button>
 					</div>
 				</div>
 			</section>
@@ -279,23 +252,23 @@ export default function Home() {
 									</div>
 									<ul className="space-y-3 mb-8 text-left">
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Simple AI chatbot
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Basic automation workflow
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>2
+											<Check className="mr-3 text-green-500" size={18} />2
 											integrations included
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Setup and deployment
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											14 days of support
 										</li>
 									</ul>
@@ -319,23 +292,23 @@ export default function Home() {
 									</div>
 									<ul className="space-y-3 mb-8 text-left">
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Custom AI agent development
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Automation workflow design
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Essential integrations: APIs, databases, analytics
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Setup and deployment
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Performance monitoring
 										</li>
 									</ul>
@@ -356,27 +329,27 @@ export default function Home() {
 									</div>
 									<ul className="space-y-3 mb-8 text-left">
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Advanced AI agent development
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Complex automation workflows
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Full system integrations
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Training and documentation
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											30 days of support
 										</li>
 										<li className="flex items-center text-medium-contrast">
-											<span className="mr-3 text-green-500 text-lg">✓</span>
+											<Check className="mr-3 text-green-500" size={18} />
 											Priority development
 										</li>
 									</ul>
@@ -475,7 +448,9 @@ export default function Home() {
 					<div className="gap-12 grid md:grid-cols-3 mx-auto max-w-5xl">
 						<RevealAnimation delay={0.2}>
 							<div className="text-center">
-								<div className="mb-6 text-6xl">⚡</div>
+								<div className="mb-6 flex justify-center">
+									<Zap className="text-[#2c5688]" size={64} />
+								</div>
 								<h3 className="mb-3 font-bold text-high-contrast text-xl">
 									Implement quickly and cost-effectively
 								</h3>
@@ -487,7 +462,9 @@ export default function Home() {
 						</RevealAnimation>
 						<RevealAnimation delay={0.4}>
 							<div className="text-center">
-								<div className="mb-6 text-6xl">📊</div>
+								<div className="mb-6 flex justify-center">
+									<BarChart3 className="text-[#2c5688]" size={64} />
+								</div>
 								<h3 className="mb-3 font-bold text-high-contrast text-xl">
 									Start learning from real data
 								</h3>
@@ -499,7 +476,9 @@ export default function Home() {
 						</RevealAnimation>
 						<RevealAnimation delay={0.6}>
 							<div className="text-center">
-								<div className="mb-6 text-6xl">🎯</div>
+								<div className="mb-6 flex justify-center">
+									<Target className="text-[#2c5688]" size={64} />
+								</div>
 								<h3 className="mb-3 font-bold text-high-contrast text-xl">
 									Focus on core business features
 								</h3>
