@@ -1,85 +1,85 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
-	"assist": { "actions": { "source": { "organizeImports": "on" } } },
-	"files": {
-		"includes": ["**", "!**/*.gen.ts", "!**/*config*"]
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"correctness": {
-				"useImportExtensions": "off",
-				"noUndeclaredVariables": "off",
-				"noPrivateImports": "off"
-			},
-			"complexity": {
-				"noForEach": "off",
-				"useWhile": "off"
-			},
-			"style": {
-				"useBlockStatements": "off",
-				"noDefaultExport": "off",
-				"noImplicitBoolean": "off",
-				"noNonNullAssertion": "off",
-				"useExplicitLengthCheck": "off",
-				"useFilenamingConvention": "off",
-				"useComponentExportOnlyModules": "off"
-			},
-			"suspicious": {
-				"noConsole": "info",
-				"noReactSpecificProps": "off"
-			},
-			"performance": {
-				"noNamespaceImport": "info"
-			}
-		}
-	},
-	"formatter": {
-		"indentStyle": "space",
-		"indentWidth": 2,
-		"lineWidth": 120,
-		"includes": ["**", "!**/.gitignore"]
-	},
-	"html": {
-		"formatter": {
-			"indentStyle": "space"
-		}
-	},
-	"css": {
-		"formatter": {
-			"enabled": true,
-			"indentStyle": "space"
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"enabled": true,
-			"arrowParentheses": "asNeeded",
-			"attributePosition": "multiline",
-			"bracketSpacing": true,
-			"indentStyle": "space",
-			"jsxQuoteStyle": "single",
-			"quoteStyle": "single",
-			"semicolons": "asNeeded",
-			"trailingCommas": "none"
-		}
-	},
-	"json": {
-		"formatter": {
-			"enabled": true,
-			"indentStyle": "space",
-			"trailingCommas": "none"
-		},
-		"linter": {
-			"enabled": true
-		},
-		"parser": {
-			"allowComments": true
-		}
-	},
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"defaultBranch": "main"
-	}
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "files": {
+    "includes": ["**", "!**/*.gen.ts", "!**/*config*"]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "correctness": {
+        "useImportExtensions": "off",
+        "noUndeclaredVariables": "off",
+        "noPrivateImports": "off"
+      },
+      "complexity": {
+        "noForEach": "off",
+        "useWhile": "off"
+      },
+      "style": {
+        "useBlockStatements": "off",
+        "noDefaultExport": "off",
+        "noImplicitBoolean": "off",
+        "noNonNullAssertion": "off",
+        "useExplicitLengthCheck": "off",
+        "useFilenamingConvention": "off",
+        "useComponentExportOnlyModules": "off"
+      },
+      "suspicious": {
+        "noConsole": "info",
+        "noReactSpecificProps": "off"
+      },
+      "performance": {
+        "noNamespaceImport": "info"
+      }
+    }
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 120,
+    "includes": ["**", "!**/.gitignore"]
+  },
+  "html": {
+    "formatter": {
+      "indentStyle": "space"
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space"
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "arrowParentheses": "asNeeded",
+      "attributePosition": "multiline",
+      "bracketSpacing": true,
+      "indentStyle": "space",
+      "jsxQuoteStyle": "single",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "none"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "trailingCommas": "none"
+    },
+    "linter": {
+      "enabled": true
+    },
+    "parser": {
+      "allowComments": true
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "defaultBranch": "main"
+  }
 }
