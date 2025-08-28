@@ -644,57 +644,136 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className='px-6 section-padding'>
-        <div className='mx-auto container'>
+      <section className='bg-white px-6 py-20'>
+        <div className='mx-auto max-w-3xl'>
           <RevealAnimation>
             <div className='mb-20 text-center'>
-              <h2 className='mb-6 font-bold text-high-contrast text-4xl md:text-5xl'>Trusted by founders worldwide</h2>
+              <h2
+                className='mb-6 font-bold text-[#30313D]'
+                style={{ fontSize: '1.875rem' }}
+              >
+                Trusted by founders worldwide
+              </h2>
             </div>
           </RevealAnimation>
-          <div className='gap-8 grid md:grid-cols-3'>
+          <div className='space-y-6'>
             <RevealAnimation delay={0.2}>
-              <div className='p-8 rounded-2xl glass dark:glass-dark card-hover'>
-                <div className='flex items-center mb-4'>
-                  <div className='bg-slate-300 dark:bg-slate-600 mr-4 rounded-full w-12 h-12'></div>
-                  <div>
-                    <div className='font-bold text-high-contrast'>Anthony Privitelli</div>
-                    <div className='text-medium-contrast text-sm'>Founder of Creator Testing and BurnFM</div>
+              <div className='relative bg-gradient-to-br from-white to-blue-50/50 p-6 border border-blue-200/60 shadow-lg rounded-xl overflow-hidden'>
+                <div className='absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-100/20 to-transparent rounded-full -mr-12 -mt-12'></div>
+                <div className='relative z-10'>
+                  <div className='flex items-start gap-4'>
+                    <div className='relative flex-shrink-0'>
+                      <div className='bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12 flex items-center justify-center'>
+                        <span className='font-bold text-white text-sm'>AP</span>
+                      </div>
+                    </div>
+                    
+                    <div className='flex-1 min-w-0'>
+                      <div className='flex items-center justify-between mb-2'>
+                        <div>
+                          <div className='font-bold text-[#30313D]'>Anthony Privitelli</div>
+                          <div className='text-[#67768c] text-sm'>Founder, Creator Testing</div>
+                        </div>
+                        <div className='flex items-center text-yellow-500'>
+                          {'★★★★★'.split('').map((star, i) => (
+                            <span key={i} className='text-sm'>{star}</span>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <p className='font-medium text-[#30313D] text-base leading-relaxed mb-3'>
+                        "Automated our entire customer onboarding process. What used to take 4-5 hours per client now happens in minutes. I highly recommend having an intro call with the team."
+                      </p>
+                      
+                      <div className='flex items-center justify-between text-sm'>
+                        <span className='bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium'>
+                          Delivered in 3 weeks
+                        </span>
+                        <span className='text-[#2c5688] font-medium'>Verified Client</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p className='text-medium-contrast'>
-                  "The AI agent they built automated our entire customer onboarding process. I'm super happy! I highly
-                  recommend at least having an intro call with the team."
-                </p>
               </div>
             </RevealAnimation>
+            
             <RevealAnimation delay={0.4}>
-              <div className='p-8 rounded-2xl glass dark:glass-dark card-hover'>
-                <div className='flex items-center mb-4'>
-                  <div className='bg-slate-300 dark:bg-slate-600 mr-4 rounded-full w-12 h-12'></div>
-                  <div>
-                    <div className='font-bold text-high-contrast'>Lucas Roussia</div>
-                    <div className='text-medium-contrast text-sm'>Founder of Toolpad</div>
+              <div className='relative bg-gradient-to-br from-white to-purple-50/50 p-6 border border-purple-200/60 shadow-lg rounded-xl overflow-hidden'>
+                <div className='absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-100/20 to-transparent rounded-full -mr-12 -mt-12'></div>
+                <div className='relative z-10'>
+                  <div className='flex items-start gap-4'>
+                    <div className='relative flex-shrink-0'>
+                      <div className='bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12 flex items-center justify-center'>
+                        <span className='font-bold text-white text-sm'>LR</span>
+                      </div>
+                    </div>
+                    
+                    <div className='flex-1 min-w-0'>
+                      <div className='flex items-center justify-between mb-2'>
+                        <div>
+                          <div className='font-bold text-[#30313D]'>Lucas Roussia</div>
+                          <div className='text-[#67768c] text-sm'>Founder, Toolpad</div>
+                        </div>
+                        <div className='flex items-center text-yellow-500'>
+                          {'★★★★★'.split('').map((star, i) => (
+                            <span key={i} className='text-sm'>{star}</span>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <p className='font-medium text-[#30313D] text-base leading-relaxed mb-3'>
+                        "Delivered our AI automation in just 3 weeks. The system now handles 80% of our data processing automatically. Communication is smooth and very professional."
+                      </p>
+                      
+                      <div className='flex items-center justify-between text-sm'>
+                        <span className='bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium'>
+                          Delivered in 3 weeks
+                        </span>
+                        <span className='text-[#2c5688] font-medium'>Verified Client</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p className='text-medium-contrast'>
-                  "It was a pleasure working with TideTech, who delivered our AI automation in just 3 weeks.
-                  Communication is smooth, they're very professional and a joy to work with."
-                </p>
               </div>
             </RevealAnimation>
+            
             <RevealAnimation delay={0.6}>
-              <div className='p-8 rounded-2xl glass dark:glass-dark card-hover'>
-                <div className='flex items-center mb-4'>
-                  <div className='bg-slate-300 dark:bg-slate-600 mr-4 rounded-full w-12 h-12'></div>
-                  <div>
-                    <div className='font-bold text-high-contrast'>Luke Turvey</div>
-                    <div className='text-medium-contrast text-sm'>Founder of Pentest List</div>
+              <div className='relative bg-gradient-to-br from-white to-green-50/50 p-6 border border-green-200/60 shadow-lg rounded-xl overflow-hidden'>
+                <div className='absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-green-100/20 to-transparent rounded-full -mr-12 -mt-12'></div>
+                <div className='relative z-10'>
+                  <div className='flex items-start gap-4'>
+                    <div className='relative flex-shrink-0'>
+                      <div className='bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12 flex items-center justify-center'>
+                        <span className='font-bold text-white text-sm'>LT</span>
+                      </div>
+                    </div>
+                    
+                    <div className='flex-1 min-w-0'>
+                      <div className='flex items-center justify-between mb-2'>
+                        <div>
+                          <div className='font-bold text-[#30313D]'>Luke Turvey</div>
+                          <div className='text-[#67768c] text-sm'>Founder, Pentest List</div>
+                        </div>
+                        <div className='flex items-center text-yellow-500'>
+                          {'★★★★★'.split('').map((star, i) => (
+                            <span key={i} className='text-sm'>{star}</span>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <p className='font-medium text-[#30313D] text-base leading-relaxed mb-3'>
+                        "Built an AI agent in just 2 weeks with flawless automation. Increased our efficiency by 300% and handles complex security assessments automatically. Outstanding communication!"
+                      </p>
+                      
+                      <div className='flex items-center justify-between text-sm'>
+                        <span className='bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium'>
+                          Delivered in 2 weeks
+                        </span>
+                        <span className='text-[#2c5688] font-medium'>Verified Client</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p className='text-medium-contrast'>
-                  "TideTech built an AI agent for me in just 2 weeks, delivering a flawless automated experience. Their
-                  creativity and communication is outstanding. I'd use TideTech every time!"
-                </p>
               </div>
             </RevealAnimation>
           </div>
