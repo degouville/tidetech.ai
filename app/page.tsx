@@ -12,40 +12,45 @@ export default function Home() {
     >
       {/* Navigation */}
       <nav className='top-0 z-50 fixed w-full'>
-        <div className='mx-auto px-6 py-4 max-w-3xl'>
+        <div className='mx-auto py-4 max-w-3xl'>
           <GlassSurface
-            width='100%'
+            blur={20}
+            className='border border-[#2c5688]/40 w-full'
+            displace={2}
+            distortionScale={10}
             height={80}
-            borderRadius={16}
-            className='w-full'
+            mixBlendMode='exclusion'
+            borderRadius={50}
+            saturation={2}
+            width='100%'
           >
             <div className='flex justify-between items-center px-4 w-full'>
               <div className='flex items-center space-x-2'>
-                <div className='bg-[#2c5688] rounded-lg w-8 h-8 animate-float'></div>
+                <div className='bg-[#2c5688] rounded-full w-8 h-8'></div>
                 <span className='font-extrabold text-[#2c5688] text-2xl'>TideTech.ai</span>
               </div>
-              <div className='hidden md:flex items-center space-x-8'>
+              <div className='hidden md:flex items-center space-x-4'>
                 <a
                   href='#work'
-                  className='font-semibold text-[#30313D] hover:text-[#2c5688] text-lg transition-colors'
+                  className='text-[#30313D] hover:text-[#2c5688] transition-colors'
                 >
                   Our Work
                 </a>
                 <a
                   href='#process'
-                  className='font-semibold text-[#30313D] hover:text-[#2c5688] text-lg transition-colors'
+                  className='text-[#30313D] hover:text-[#2c5688] transition-colors'
                 >
                   Process
                 </a>
                 <a
                   href='#pricing'
-                  className='font-semibold text-[#30313D] hover:text-[#2c5688] text-lg transition-colors'
+                  className='text-[#30313D] hover:text-[#2c5688] transition-colors'
                 >
                   Pricing
                 </a>
                 <button
                   type='button'
-                  className='bg-[#2c5688] px-5 py-3 rounded-xl font-extrabold text-[17px] text-white hover:scale-95 transition-transform duration-200'
+                  className='bg-[#2c5688] px-5 py-3 rounded-full font-extrabold text-[17px] text-white hover:scale-95 transition-transform duration-200'
                 >
                   Talk with us
                 </button>
