@@ -61,74 +61,224 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className='px-6 pt-40 pb-32'>
-        <div className='mx-auto max-w-3xl text-center'>
+      <section className='pt-32 pb-20 bg-gradient-to-b from-white to-gray-50/50'>
+        <div className='mx-auto px-6 max-w-7xl'>
+          {/* Promotional Banner */}
           <RevealAnimation>
-            <h1
-              className='mb-6 font-extrabold text-[#30313D] leading-none'
-              style={{ fontSize: '52px', letterSpacing: '-0.4px' }}
-            >
-              Build your{' '}
-              <span className='inline-block top-13 relative'>
-                <span className='relative p-4 text-[#2c5688]'>
-                  <RotatingText
-                    texts={['AI Agent', 'Automation', 'AI Assistant']}
-                    rotationInterval={3000}
-                    staggerDuration={0.02}
-                  />
-                </span>
-              </span>
-              <br />
-              in weeks, <span className='text-[#67768c]'>not months</span>
-            </h1>
-          </RevealAnimation>
-
-          <RevealAnimation delay={0.2}>
-            <p
-              className='mx-auto mb-8 max-w-2xl font-semibold text-[#67768c]'
-              style={{ fontSize: '1.25rem', lineHeight: '1.4' }}
-            >
-              Transform your business with custom AI agents and automation. Fast, intelligent, and seamlessly
-              integrated.
-            </p>
-          </RevealAnimation>
-
-          <RevealAnimation delay={0.4}>
-            <div className='flex sm:flex-row flex-col justify-center gap-4 mb-16'>
-              <button
-                type='button'
-                className='bg-[#2c5688] px-5 py-3 rounded-xl font-extrabold text-white hover:scale-95 transition-transform duration-200'
-                style={{ fontSize: '17px' }}
-              >
-                Start Your AI Journey
-              </button>
-              <button
-                type='button'
-                className='bg-[#E2E8F0] px-5 py-3 rounded-xl font-extrabold text-[#1A202C] hover:scale-95 transition-transform duration-200'
-                style={{ fontSize: '17px' }}
-              >
-                See Our Work
-              </button>
+            <div className='flex justify-center mb-8'>
+              <div className='bg-blue-50 border border-blue-200 px-6 py-3 rounded-full'>
+                <div className='flex items-center text-blue-700 text-sm font-medium'>
+                  <svg className='w-4 h-4 mr-2' fill='currentColor' viewBox='0 0 20 20'>
+                    <path fillRule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L7.53 10.07a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z' clipRule='evenodd' />
+                  </svg>
+                  Limited Time: Get your AI Agent MVP in 2 weeks (Book consultation by Sept 15)
+                </div>
+              </div>
             </div>
           </RevealAnimation>
 
-          {/* Trust Indicators */}
+          <div className='gap-12 grid lg:grid-cols-2 items-center'>
+            {/* Left Column - Content */}
+            <div className='space-y-8'>
+              <RevealAnimation>
+                <h1 className='font-extrabold text-[#30313D] leading-none' style={{ fontSize: '3.5rem', letterSpacing: '-0.02em' }}>
+                  Build your{' '}
+                  <span className='inline-block relative'>
+                    <span className='relative text-[#2c5688]'>
+                      <RotatingText
+                        texts={['AI Agent', 'Automation', 'AI Assistant']}
+                        rotationInterval={3000}
+                        staggerDuration={0.02}
+                      />
+                    </span>
+                  </span>
+                  <br />
+                  <span className='text-[#67768c]'>in weeks, not months</span>
+                </h1>
+              </RevealAnimation>
 
-          <RevealAnimation delay={0.6}>
-            <div
-              className='mb-8 font-semibold text-[#67768c]'
-              style={{ fontSize: '1.25rem' }}
-            >
-              <span className='text-[#67768c]'>Founders from</span> Google, Y Combinator, TikTok, Patreon, Bank of
-              America, PwC, Web3 & AI startups <span className='text-[#67768c]'>trusted us to deliver</span>
+              <RevealAnimation delay={0.2}>
+                <p className='font-medium text-[#67768c] text-xl leading-relaxed max-w-lg'>
+                  Transform your business with custom AI agents and automation. Fast, intelligent, and seamlessly integrated.
+                </p>
+              </RevealAnimation>
+
+              <RevealAnimation delay={0.4}>
+                <div className='flex sm:flex-row flex-col gap-4'>
+                  <button className='bg-[#2c5688] px-8 py-4 rounded-lg font-semibold text-white text-lg hover:bg-[#1e3a5f] transition-colors'>
+                    Start Your AI Journey
+                  </button>
+                  <button className='bg-white border-2 border-gray-200 px-8 py-4 rounded-lg font-semibold text-[#30313D] text-lg hover:border-gray-300 transition-colors'>
+                    See Our Work
+                  </button>
+                </div>
+              </RevealAnimation>
+
+              {/* Social Proof */}
+              <RevealAnimation delay={0.6}>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-6 pt-8'>
+                  <div className='text-center'>
+                    <div className='font-bold text-[#2c5688] text-2xl'>4.9/5</div>
+                    <div className='text-[#67768c] text-sm'>rating</div>
+                  </div>
+                  <div className='text-center'>
+                    <div className='font-bold text-[#2c5688] text-2xl'>50+</div>
+                    <div className='text-[#67768c] text-sm'>businesses transformed</div>
+                  </div>
+                  <div className='text-center'>
+                    <div className='font-bold text-[#2c5688] text-2xl'>2-week</div>
+                    <div className='text-[#67768c] text-sm'>average delivery</div>
+                  </div>
+                  <div className='text-center'>
+                    <div className='font-bold text-[#2c5688] text-2xl'>2024</div>
+                    <div className='text-[#67768c] text-sm'>founded</div>
+                  </div>
+                </div>
+              </RevealAnimation>
+
+              {/* Client Logos */}
+              <RevealAnimation delay={0.8}>
+                <div className='pt-8'>
+                  <div className='mb-4 font-medium text-[#67768c] text-sm'>Trusted by leading companies</div>
+                  <div className='gap-6 grid grid-cols-4 opacity-60'>
+                    <div className='font-semibold text-[#67768c]'>TechCorp</div>
+                    <div className='font-semibold text-[#67768c]'>DataFlow</div>
+                    <div className='font-semibold text-[#67768c]'>AutomateNow</div>
+                    <div className='font-semibold text-[#67768c]'>SmartOps</div>
+                    <div className='font-semibold text-[#67768c]'>InnovateLab</div>
+                    <div className='font-semibold text-[#67768c]'>ProcessPro</div>
+                    <div className='font-semibold text-[#67768c]'>AIFirst</div>
+                    <div className='font-semibold text-[#67768c]'>ScaleUp</div>
+                  </div>
+                </div>
+              </RevealAnimation>
             </div>
-            <div className='flex flex-wrap justify-center items-center gap-8 opacity-60 hover:opacity-80 transition-opacity duration-500'>
-              <div className='font-bold text-[#67768c] text-xl'>Google</div>
-              <div className='font-bold text-[#67768c] text-xl'>Y Combinator</div>
-              <div className='font-bold text-[#67768c] text-xl'>TikTok</div>
-              <div className='font-bold text-[#67768c] text-xl'>Bank of America</div>
-              <div className='font-bold text-[#67768c] text-xl'>PwC</div>
-              <div className='font-bold text-[#67768c] text-xl'>Patreon</div>
+
+            {/* Right Column - Visual Examples */}
+            <div className='relative'>
+              <RevealAnimation delay={0.3}>
+                <div className='space-y-6'>
+                  {/* Top: Customer Service Bot */}
+                  <div className='relative bg-white p-6 border border-gray-200 shadow-lg rounded-xl'>
+                    <div className='flex justify-between items-start mb-4'>
+                      <div className='bg-green-100 px-3 py-1 rounded-full'>
+                        <span className='font-medium text-green-700 text-sm'>24/7 Support Agent</span>
+                      </div>
+                      <div className='font-medium text-[#67768c] text-sm'>&lt; 2 seconds</div>
+                    </div>
+                    <div className='space-y-3'>
+                      <div className='bg-gray-100 p-3 rounded-lg'>
+                        <div className='font-medium text-[#30313D] text-sm'>Customer: "I need help with my order"</div>
+                      </div>
+                      <div className='bg-[#2c5688] p-3 rounded-lg ml-8'>
+                        <div className='font-medium text-white text-sm'>I can help you with that! Let me look up your order details...</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Middle: Sales Pipeline */}
+                  <div className='relative bg-white p-6 border border-gray-200 shadow-lg rounded-xl'>
+                    <div className='flex justify-between items-start mb-4'>
+                      <div className='bg-blue-100 px-3 py-1 rounded-full'>
+                        <span className='font-medium text-blue-700 text-sm'>Sales Automation</span>
+                      </div>
+                      <div className='font-medium text-green-600 text-sm'>+300% qualified leads</div>
+                    </div>
+                    <div className='space-y-2'>
+                      <div className='flex justify-between items-center p-2 rounded'>
+                        <span className='text-[#30313D] text-sm'>High-intent leads</span>
+                        <div className='bg-green-500 rounded-full w-3 h-3'></div>
+                      </div>
+                      <div className='flex justify-between items-center p-2 rounded'>
+                        <span className='text-[#30313D] text-sm'>Follow-up scheduled</span>
+                        <div className='bg-yellow-500 rounded-full w-3 h-3'></div>
+                      </div>
+                      <div className='flex justify-between items-center p-2 rounded'>
+                        <span className='text-[#30313D] text-sm'>Nurture sequence</span>
+                        <div className='bg-blue-500 rounded-full w-3 h-3'></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom: Data Analysis */}
+                  <div className='relative bg-white p-6 border border-gray-200 shadow-lg rounded-xl'>
+                    <div className='flex justify-between items-start mb-4'>
+                      <div className='bg-purple-100 px-3 py-1 rounded-full'>
+                        <span className='font-medium text-purple-700 text-sm'>Data Analysis Agent</span>
+                      </div>
+                      <div className='font-medium text-[#67768c] text-sm'>Saves 20 hours/week</div>
+                    </div>
+                    <div className='space-y-3'>
+                      <div className='flex justify-between'>
+                        <span className='text-[#30313D] text-sm'>Revenue Growth</span>
+                        <span className='font-semibold text-green-600'>+24%</span>
+                      </div>
+                      <div className='bg-gray-100 rounded-full w-full h-2'>
+                        <div className='bg-[#2c5688] rounded-full w-3/4 h-2'></div>
+                      </div>
+                      <div className='flex justify-between'>
+                        <span className='text-[#30313D] text-sm'>Customer Satisfaction</span>
+                        <span className='font-semibold text-blue-600'>94%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </RevealAnimation>
+            </div>
+          </div>
+          {/* Bottom Service Category Cards */}
+          <RevealAnimation delay={1.0}>
+            <div className='pt-20'>
+              <div className='gap-6 grid md:grid-cols-2 lg:grid-cols-4'>
+                <div className='bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow'>
+                  <div className='flex items-center mb-4'>
+                    <div className='bg-green-100 p-3 rounded-lg mr-4'>
+                      <svg className='w-6 h-6 text-green-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z' />
+                      </svg>
+                    </div>
+                    <h3 className='font-semibold text-[#30313D]'>Customer Support</h3>
+                  </div>
+                  <p className='text-[#67768c] text-sm'>24/7 intelligent customer service agents that handle inquiries instantly</p>
+                </div>
+
+                <div className='bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow'>
+                  <div className='flex items-center mb-4'>
+                    <div className='bg-blue-100 p-3 rounded-lg mr-4'>
+                      <svg className='w-6 h-6 text-blue-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />
+                      </svg>
+                    </div>
+                    <h3 className='font-semibold text-[#30313D]'>Sales Automation</h3>
+                  </div>
+                  <p className='text-[#67768c] text-sm'>Lead qualification and nurturing systems that convert prospects automatically</p>
+                </div>
+
+                <div className='bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow'>
+                  <div className='flex items-center mb-4'>
+                    <div className='bg-purple-100 p-3 rounded-lg mr-4'>
+                      <svg className='w-6 h-6 text-purple-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' />
+                      </svg>
+                    </div>
+                    <h3 className='font-semibold text-[#30313D]'>Data Analytics</h3>
+                  </div>
+                  <p className='text-[#67768c] text-sm'>Automated insights and reporting agents that analyze your business data</p>
+                </div>
+
+                <div className='bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow'>
+                  <div className='flex items-center mb-4'>
+                    <div className='bg-orange-100 p-3 rounded-lg mr-4'>
+                      <svg className='w-6 h-6 text-orange-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' />
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
+                      </svg>
+                    </div>
+                    <h3 className='font-semibold text-[#30313D]'>Process Optimization</h3>
+                  </div>
+                  <p className='text-[#67768c] text-sm'>Custom workflow automation solutions that streamline your operations</p>
+                </div>
+              </div>
             </div>
           </RevealAnimation>
         </div>
