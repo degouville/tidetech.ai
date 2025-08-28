@@ -1,4 +1,6 @@
-import { BarChart3, Calendar, Check, Package, Rocket, Target, Users, Zap } from 'lucide-react'
+import { BarChart3, Calendar, Package, Rocket, Target, Users, Zap } from 'lucide-react'
+import PrismaticBurst from '../PrismaticBurst/PrismaticBurst'
+import RotatingText from '../RotatingText/RotatingText'
 import RevealAnimation from './components/RevealAnimation'
 
 export default function Home() {
@@ -54,9 +56,14 @@ export default function Home() {
               style={{ fontSize: '52px', letterSpacing: '-0.4px' }}
             >
               Build your{' '}
-              <span className='inline-block relative'>
-                <span className='absolute inset-0 bg-[#2c5688] rounded-lg -rotate-1 transform'></span>
-                <span className='relative px-3 py-1 text-white'>AI Agent</span>
+              <span className='inline-block top-13 relative'>
+                <span className='relative p-4 text-[#2c5688]'>
+                  <RotatingText
+                    texts={['AI Agent', 'Automation', 'AI Assistant']}
+                    rotationInterval={3000}
+                    staggerDuration={0.02}
+                  />
+                </span>
               </span>
               <br />
               in weeks, <span className='text-[#67768c]'>not months</span>
@@ -233,15 +240,17 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <div className='ml-6 flex-1'>
+              <div className='flex-1 ml-6'>
                 <div className='flex sm:flex-row flex-col justify-between items-start mb-4'>
                   <h3 className='font-bold text-[#30313D] text-xl'>Discovery & Specification</h3>
-                  <span className='bg-[#2c5688] px-3 py-1 rounded-full font-medium text-white text-sm mt-2 sm:mt-0'>Week 1</span>
+                  <span className='bg-[#2c5688] mt-2 sm:mt-0 px-3 py-1 rounded-full font-medium text-white text-sm'>
+                    Week 1
+                  </span>
                 </div>
                 <p className='mb-4 font-semibold text-[#67768c] text-lg'>
                   We dive deep into your business needs to create a comprehensive blueprint for your AI agent.
                 </p>
-                
+
                 <div className='gap-6 grid md:grid-cols-2 mb-6'>
                   <div className='bg-gray-50 p-4 rounded-lg'>
                     <h4 className='mb-2 font-semibold text-[#30313D]'>What We Do:</h4>
@@ -268,7 +277,7 @@ export default function Home() {
                 <div className='bg-blue-50 p-4 rounded-lg'>
                   <h4 className='mb-2 font-semibold text-[#2c5688]'>Deliverables:</h4>
                   <p className='text-[#67768c]'>
-                    Detailed technical specification document, system architecture diagram, integration roadmap, 
+                    Detailed technical specification document, system architecture diagram, integration roadmap,
                     timeline with milestones, and project kickoff presentation.
                   </p>
                 </div>
@@ -314,15 +323,17 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <div className='ml-6 flex-1'>
+              <div className='flex-1 ml-6'>
                 <div className='flex sm:flex-row flex-col justify-between items-start mb-4'>
                   <h3 className='font-bold text-[#30313D] text-xl'>Agile Development & Testing</h3>
-                  <span className='bg-[#2c5688] px-3 py-1 rounded-full font-medium text-white text-sm mt-2 sm:mt-0'>Weeks 2-3</span>
+                  <span className='bg-[#2c5688] mt-2 sm:mt-0 px-3 py-1 rounded-full font-medium text-white text-sm'>
+                    Weeks 2-3
+                  </span>
                 </div>
                 <p className='mb-4 font-semibold text-[#67768c] text-lg'>
                   Your AI agent comes to life through iterative development with continuous feedback and refinement.
                 </p>
-                
+
                 <div className='gap-6 grid md:grid-cols-2 mb-6'>
                   <div className='bg-gray-50 p-4 rounded-lg'>
                     <h4 className='mb-2 font-semibold text-[#30313D]'>Development Phases:</h4>
@@ -349,7 +360,9 @@ export default function Home() {
                 <div className='gap-4 grid sm:grid-cols-2 mb-6'>
                   <div className='bg-green-50 p-3 rounded-lg'>
                     <h5 className='mb-1 font-medium text-[#22c55e]'>Quality Assurance:</h5>
-                    <p className='text-[#67768c] text-sm'>Automated testing, security audits, and performance benchmarking</p>
+                    <p className='text-[#67768c] text-sm'>
+                      Automated testing, security audits, and performance benchmarking
+                    </p>
                   </div>
                   <div className='bg-purple-50 p-3 rounded-lg'>
                     <h5 className='mb-1 font-medium text-[#8b5cf6]'>Version Control:</h5>
@@ -360,8 +373,8 @@ export default function Home() {
                 <div className='bg-blue-50 p-4 rounded-lg'>
                   <h4 className='mb-2 font-semibold text-[#2c5688]'>Weekly Deliverables:</h4>
                   <p className='text-[#67768c]'>
-                    Working prototypes, integration demos, progress documentation, test results, 
-                    and refined feature implementations based on your feedback.
+                    Working prototypes, integration demos, progress documentation, test results, and refined feature
+                    implementations based on your feedback.
                   </p>
                 </div>
               </div>
@@ -402,15 +415,17 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <div className='ml-6 flex-1'>
+              <div className='flex-1 ml-6'>
                 <div className='flex sm:flex-row flex-col justify-between items-start mb-4'>
                   <h3 className='font-bold text-[#30313D] text-xl'>Deployment & Handover</h3>
-                  <span className='bg-[#2c5688] px-3 py-1 rounded-full font-medium text-white text-sm mt-2 sm:mt-0'>Week 4</span>
+                  <span className='bg-[#2c5688] mt-2 sm:mt-0 px-3 py-1 rounded-full font-medium text-white text-sm'>
+                    Week 4
+                  </span>
                 </div>
                 <p className='mb-4 font-semibold text-[#67768c] text-lg'>
                   Seamless production deployment with comprehensive training and ongoing support to ensure your success.
                 </p>
-                
+
                 <div className='gap-6 grid md:grid-cols-2 mb-6'>
                   <div className='bg-gray-50 p-4 rounded-lg'>
                     <h4 className='mb-2 font-semibold text-[#30313D]'>Production Setup:</h4>
@@ -452,8 +467,8 @@ export default function Home() {
                 <div className='bg-blue-50 p-4 rounded-lg'>
                   <h4 className='mb-2 font-semibold text-[#2c5688]'>Launch Package Includes:</h4>
                   <p className='text-[#67768c]'>
-                    Production-ready AI agent, complete source code, deployment documentation, 
-                    user training materials, system monitoring dashboard, and 30 days of post-launch support.
+                    Production-ready AI agent, complete source code, deployment documentation, user training materials,
+                    system monitoring dashboard, and 30 days of post-launch support.
                   </p>
                 </div>
               </div>
@@ -488,158 +503,138 @@ export default function Home() {
               <h2 className='mb-6 font-bold text-high-contrast text-4xl md:text-5xl'>Pricing</h2>
             </div>
           </RevealAnimation>
-          <div className='gap-8 grid md:grid-cols-3 mx-auto max-w-7xl'>
-            <RevealAnimation
-              delay={0.1}
-              direction='left'
-            >
-              <div className='p-8 rounded-2xl glass dark:glass-dark card-hover'>
-                <div className='text-center'>
-                  <div className='mb-2 font-semibold text-blue-600 text-lg'>Starter</div>
-                  <div className='mb-2 font-bold text-high-contrast text-3xl'>$3,999</div>
-                  <div className='mb-6 text-medium-contrast'>/ AI Assistant</div>
-                  <ul className='space-y-3 mb-8 text-left'>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Simple AI chatbot
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Basic automation workflow
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      2 integrations included
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Setup and deployment
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      14 days of support
-                    </li>
-                  </ul>
+          <div className='mx-auto max-w-6xl'>
+            <RevealAnimation>
+              <div className='bg-white shadow-xl border border-gray-200 rounded-2xl'>
+                {/* Table Header */}
+                <div className='bg-gray-50 border-gray-200 border-b'>
+                  <div className='gap-4 grid grid-cols-4 p-6'>
+                    <div className='font-semibold text-[#30313D] text-lg'>Features</div>
+                    <div className='text-left'>
+                      <div className='mb-1 font-semibold text-[#2c5688] text-lg'>Starter</div>
+                      <div className='font-bold text-[#30313D] text-2xl'>$3,999</div>
+                      <div className='text-[#67768c] text-sm'>/ AI Assistant</div>
+                    </div>
+                    <div className='relative text-left'>
+                      <div className='-top-9 left-0 absolute bg-[#2c5688] px-3 py-1 rounded-full font-medium text-white text-xs -translate-x-0 transform'>
+                        Most Popular
+                      </div>
+                      <div className='mb-1 font-semibold text-[#2c5688] text-lg'>Professional</div>
+                      <div className='font-bold text-[#30313D] text-2xl'>$6,999</div>
+                      <div className='text-[#67768c] text-sm'>/ AI Agent System</div>
+                    </div>
+                    <div className='text-left'>
+                      <div className='mb-1 font-semibold text-[#2c5688] text-lg'>Enterprise</div>
+                      <div className='font-bold text-[#30313D] text-2xl'>$12,999</div>
+                      <div className='text-[#67768c] text-sm'>/ AI Agent System</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </RevealAnimation>
-            <RevealAnimation delay={0.3}>
-              <div className='relative p-8 border-2 border-blue-500 rounded-2xl glass dark:glass-dark card-hover'>
-                <div className='-top-4 left-1/2 absolute bg-blue-500 shadow-lg px-4 py-1 rounded-full font-medium text-white text-sm -translate-x-1/2 transform'>
-                  Most Popular
+
+                {/* Table Body */}
+                <div className='divide-y divide-gray-100'>
+                  {/* AI Development */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>AI Development</div>
+                    <div className='text-[#67768c] text-left'>Simple AI chatbot</div>
+                    <div className='text-[#67768c] text-left'>Custom AI agent development</div>
+                    <div className='text-[#67768c] text-left'>Advanced AI agent development</div>
+                  </div>
+
+                  {/* Automation */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>Automation Workflows</div>
+                    <div className='text-[#67768c] text-left'>Basic automation workflow</div>
+                    <div className='text-[#67768c] text-left'>Automation workflow design</div>
+                    <div className='text-[#67768c] text-left'>Complex automation workflows</div>
+                  </div>
+
+                  {/* Integrations */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>System Integrations</div>
+                    <div className='text-[#67768c] text-left'>2 integrations included</div>
+                    <div className='text-[#67768c] text-left'>APIs, databases, analytics</div>
+                    <div className='text-[#67768c] text-left'>Full system integrations</div>
+                  </div>
+
+                  {/* Setup & Deployment */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>Setup & Deployment</div>
+                    <div className='text-[#67768c] text-left'>Included</div>
+                    <div className='text-[#67768c] text-left'>Included</div>
+                    <div className='text-[#67768c] text-left'>Included</div>
+                  </div>
+
+                  {/* Performance Monitoring */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>Performance Monitoring</div>
+                    <div className='text-[#67768c] text-left'>—</div>
+                    <div className='text-[#67768c] text-left'>Included</div>
+                    <div className='text-[#67768c] text-left'>Included</div>
+                  </div>
+
+                  {/* Training & Documentation */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>Training & Documentation</div>
+                    <div className='text-[#67768c] text-left'>Basic setup guide</div>
+                    <div className='text-[#67768c] text-left'>User guides & tutorials</div>
+                    <div className='text-[#67768c] text-left'>Comprehensive training & docs</div>
+                  </div>
+
+                  {/* Support Duration */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>Post-Launch Support</div>
+                    <div className='text-[#67768c] text-left'>14 days</div>
+                    <div className='text-[#67768c] text-left'>21 days</div>
+                    <div className='text-[#67768c] text-left'>30 days</div>
+                  </div>
+
+                  {/* Development Priority */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>Development Priority</div>
+                    <div className='text-[#67768c] text-left'>Standard</div>
+                    <div className='text-[#67768c] text-left'>Standard</div>
+                    <div className='text-[#67768c] text-left'>Priority</div>
+                  </div>
+
+                  {/* Timeline */}
+                  <div className='gap-4 grid grid-cols-4 hover:bg-gray-50 p-4 transition-colors'>
+                    <div className='font-medium text-[#30313D]'>Development Timeline</div>
+                    <div className='text-[#67768c] text-left'>2-3 weeks</div>
+                    <div className='text-[#67768c] text-left'>3-4 weeks</div>
+                    <div className='text-[#67768c] text-left'>4-6 weeks</div>
+                  </div>
                 </div>
-                <div className='text-center'>
-                  <div className='mb-2 font-semibold text-blue-600 text-lg'>Professional</div>
-                  <div className='mb-2 font-bold text-high-contrast text-3xl'>$6,999</div>
-                  <div className='mb-6 text-medium-contrast'>/ AI Agent System</div>
-                  <ul className='space-y-3 mb-8 text-left'>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Custom AI agent development
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Automation workflow design
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Essential integrations: APIs, databases, analytics
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Setup and deployment
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Performance monitoring
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </RevealAnimation>
-            <RevealAnimation
-              delay={0.5}
-              direction='right'
-            >
-              <div className='p-8 rounded-2xl glass dark:glass-dark card-hover'>
-                <div className='text-center'>
-                  <div className='mb-2 font-semibold text-blue-600 text-lg'>Enterprise</div>
-                  <div className='mb-2 font-bold text-high-contrast text-3xl'>$12,999</div>
-                  <div className='mb-6 text-medium-contrast'>/ AI Agent System</div>
-                  <ul className='space-y-3 mb-8 text-left'>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Advanced AI agent development
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Complex automation workflows
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Full system integrations
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Training and documentation
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      30 days of support
-                    </li>
-                    <li className='flex items-center text-medium-contrast'>
-                      <Check
-                        className='mr-3 text-green-500'
-                        size={18}
-                      />
-                      Priority development
-                    </li>
-                  </ul>
+
+                {/* Call to Action Footer */}
+                <div className='bg-gray-50 border-gray-200 border-t'>
+                  <div className='gap-4 grid grid-cols-4 p-6'>
+                    <div></div>
+                    <div className='text-left'>
+                      <button
+                        type='button'
+                        className='bg-[#E2E8F0] hover:bg-[#CBD5E0] px-4 py-2 rounded-lg w-full font-semibold text-[#30313D] transition-colors'
+                      >
+                        Get Started
+                      </button>
+                    </div>
+                    <div className='text-left'>
+                      <button
+                        type='button'
+                        className='bg-[#2c5688] hover:bg-[#1e3a5f] shadow-lg px-4 py-2 rounded-lg w-full font-semibold text-white transition-colors'
+                      >
+                        Get Started
+                      </button>
+                    </div>
+                    <div className='text-left'>
+                      <button
+                        type='button'
+                        className='bg-[#E2E8F0] hover:bg-[#CBD5E0] px-4 py-2 rounded-lg w-full font-semibold text-[#30313D] transition-colors'
+                      >
+                        Contact Us
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </RevealAnimation>
@@ -763,9 +758,19 @@ export default function Home() {
       {/* CTA */}
       <section
         id='contact'
-        className='px-6 section-padding gradient-bg'
+        className='relative bg-slate-900 px-6 overflow-hidden section-padding'
       >
-        <div className='mx-auto text-center container'>
+        <div className='absolute inset-0'>
+          <PrismaticBurst
+            intensity={1.5}
+            speed={0.3}
+            animationType='rotate3d'
+            colors={['#2c5688', '#4f83c7', '#7bb3ff', '#a8d0ff']}
+            distort={2}
+            mixBlendMode='screen'
+          />
+        </div>
+        <div className='z-10 relative mx-auto py-32 text-center container'>
           <RevealAnimation>
             <h2 className='mb-6 font-bold text-white text-4xl md:text-5xl'>Ready for AI transformation?</h2>
             <p className='mx-auto mb-8 max-w-2xl text-blue-100 text-xl'>
@@ -774,7 +779,7 @@ export default function Home() {
             </p>
             <a
               href='mailto:hello@tidetech.ai'
-              className='inline-block bg-white hover:bg-blue-50 shadow-lg px-8 py-4 rounded-full font-medium text-blue-600 text-lg transition-colors'
+              className='inline-block bg-white/0 hover:bg-blue-50 shadow-lg backdrop-blur-md px-8 py-4 border border-white rounded-full font-medium text-blue-100 hover:text-blue-900 text-lg transition-colors'
             >
               Start Your AI Journey
             </a>
