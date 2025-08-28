@@ -50,7 +50,7 @@ export default function Home() {
                 </a>
                 <button
                   type='button'
-                  className='bg-[#2c5688] px-5 py-3 rounded-full font-extrabold text-[17px] text-white hover:scale-95 transition-transform duration-200'
+                  className='bg-[#2c5688]/90 backdrop-blur-2xl px-5 py-3 rounded-full font-extrabold text-[17px] text-white hover:scale-95 transition-transform duration-200'
                 >
                   Talk with us
                 </button>
@@ -61,15 +61,23 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className='pt-32 pb-20 bg-gradient-to-b from-white to-gray-50/50'>
+      <section className='bg-gradient-to-b from-white to-gray-50/50 pt-32 pb-20'>
         <div className='mx-auto px-6 max-w-7xl'>
           {/* Promotional Banner */}
           <RevealAnimation>
             <div className='flex justify-center mb-8'>
-              <div className='bg-blue-50 border border-blue-200 px-6 py-3 rounded-full'>
-                <div className='flex items-center text-blue-700 text-sm font-medium'>
-                  <svg className='w-4 h-4 mr-2' fill='currentColor' viewBox='0 0 20 20'>
-                    <path fillRule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L7.53 10.07a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z' clipRule='evenodd' />
+              <div className='bg-blue-50 px-6 py-3 border border-blue-200 rounded-full'>
+                <div className='flex items-center font-medium text-blue-700 text-sm'>
+                  <svg
+                    className='mr-2 w-4 h-4'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                  >
+                    <path
+                      fillRule='evenodd'
+                      d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L7.53 10.07a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                      clipRule='evenodd'
+                    />
                   </svg>
                   Limited Time: Get your AI Agent MVP in 2 weeks (Book consultation by Sept 15)
                 </div>
@@ -77,11 +85,14 @@ export default function Home() {
             </div>
           </RevealAnimation>
 
-          <div className='gap-12 grid lg:grid-cols-2 items-center'>
+          <div className='items-center gap-12 grid lg:grid-cols-2'>
             {/* Left Column - Content */}
             <div className='space-y-8'>
               <RevealAnimation>
-                <h1 className='font-extrabold text-[#30313D] leading-none' style={{ fontSize: '3.5rem', letterSpacing: '-0.02em' }}>
+                <h1
+                  className='font-extrabold text-[#30313D] leading-none'
+                  style={{ fontSize: '3.5rem', letterSpacing: '-0.02em' }}
+                >
                   Build your{' '}
                   <span className='inline-block relative'>
                     <span className='relative text-[#2c5688]'>
@@ -98,17 +109,18 @@ export default function Home() {
               </RevealAnimation>
 
               <RevealAnimation delay={0.2}>
-                <p className='font-medium text-[#67768c] text-xl leading-relaxed max-w-lg'>
-                  Transform your business with custom AI agents and automation. Fast, intelligent, and seamlessly integrated.
+                <p className='max-w-lg font-medium text-[#67768c] text-xl leading-relaxed'>
+                  Transform your business with custom AI agents and automation. Fast, intelligent, and seamlessly
+                  integrated.
                 </p>
               </RevealAnimation>
 
               <RevealAnimation delay={0.4}>
                 <div className='flex sm:flex-row flex-col gap-4'>
-                  <button className='bg-[#2c5688] px-8 py-4 rounded-lg font-semibold text-white text-lg hover:bg-[#1e3a5f] transition-colors'>
+                  <button className='bg-[#2c5688] hover:bg-[#1e3a5f] px-8 py-4 rounded-lg font-semibold text-white text-lg transition-colors'>
                     Start Your AI Journey
                   </button>
-                  <button className='bg-white border-2 border-gray-200 px-8 py-4 rounded-lg font-semibold text-[#30313D] text-lg hover:border-gray-300 transition-colors'>
+                  <button className='bg-white px-8 py-4 border-2 border-gray-200 hover:border-gray-300 rounded-lg font-semibold text-[#30313D] text-lg transition-colors'>
                     See Our Work
                   </button>
                 </div>
@@ -116,7 +128,7 @@ export default function Home() {
 
               {/* Social Proof */}
               <RevealAnimation delay={0.6}>
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-6 pt-8'>
+                <div className='gap-6 grid grid-cols-2 md:grid-cols-4 pt-8'>
                   <div className='text-center'>
                     <div className='font-bold text-[#2c5688] text-2xl'>4.9/5</div>
                     <div className='text-[#67768c] text-sm'>rating</div>
@@ -159,7 +171,7 @@ export default function Home() {
               <RevealAnimation delay={0.3}>
                 <div className='space-y-6'>
                   {/* Top: Customer Service Bot */}
-                  <div className='relative bg-white p-6 border border-gray-200 shadow-lg rounded-xl'>
+                  <div className='relative bg-white shadow-lg p-6 border border-gray-200 rounded-xl'>
                     <div className='flex justify-between items-start mb-4'>
                       <div className='bg-green-100 px-3 py-1 rounded-full'>
                         <span className='font-medium text-green-700 text-sm'>24/7 Support Agent</span>
@@ -170,14 +182,16 @@ export default function Home() {
                       <div className='bg-gray-100 p-3 rounded-lg'>
                         <div className='font-medium text-[#30313D] text-sm'>Customer: "I need help with my order"</div>
                       </div>
-                      <div className='bg-[#2c5688] p-3 rounded-lg ml-8'>
-                        <div className='font-medium text-white text-sm'>I can help you with that! Let me look up your order details...</div>
+                      <div className='bg-[#2c5688] ml-8 p-3 rounded-lg'>
+                        <div className='font-medium text-white text-sm'>
+                          I can help you with that! Let me look up your order details...
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Middle: Sales Pipeline */}
-                  <div className='relative bg-white p-6 border border-gray-200 shadow-lg rounded-xl'>
+                  <div className='relative bg-white shadow-lg p-6 border border-gray-200 rounded-xl'>
                     <div className='flex justify-between items-start mb-4'>
                       <div className='bg-blue-100 px-3 py-1 rounded-full'>
                         <span className='font-medium text-blue-700 text-sm'>Sales Automation</span>
@@ -201,7 +215,7 @@ export default function Home() {
                   </div>
 
                   {/* Bottom: Data Analysis */}
-                  <div className='relative bg-white p-6 border border-gray-200 shadow-lg rounded-xl'>
+                  <div className='relative bg-white shadow-lg p-6 border border-gray-200 rounded-xl'>
                     <div className='flex justify-between items-start mb-4'>
                       <div className='bg-purple-100 px-3 py-1 rounded-full'>
                         <span className='font-medium text-purple-700 text-sm'>Data Analysis Agent</span>
@@ -230,53 +244,106 @@ export default function Home() {
           <RevealAnimation delay={1.0}>
             <div className='pt-20'>
               <div className='gap-6 grid md:grid-cols-2 lg:grid-cols-4'>
-                <div className='bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow'>
+                <div className='bg-white hover:shadow-lg p-6 border border-gray-200 rounded-xl transition-shadow'>
                   <div className='flex items-center mb-4'>
-                    <div className='bg-green-100 p-3 rounded-lg mr-4'>
-                      <svg className='w-6 h-6 text-green-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z' />
+                    <div className='bg-green-100 mr-4 p-3 rounded-lg'>
+                      <svg
+                        className='w-6 h-6 text-green-600'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          d='M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z'
+                        />
                       </svg>
                     </div>
                     <h3 className='font-semibold text-[#30313D]'>Customer Support</h3>
                   </div>
-                  <p className='text-[#67768c] text-sm'>24/7 intelligent customer service agents that handle inquiries instantly</p>
+                  <p className='text-[#67768c] text-sm'>
+                    24/7 intelligent customer service agents that handle inquiries instantly
+                  </p>
                 </div>
 
-                <div className='bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow'>
+                <div className='bg-white hover:shadow-lg p-6 border border-gray-200 rounded-xl transition-shadow'>
                   <div className='flex items-center mb-4'>
-                    <div className='bg-blue-100 p-3 rounded-lg mr-4'>
-                      <svg className='w-6 h-6 text-blue-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />
+                    <div className='bg-blue-100 mr-4 p-3 rounded-lg'>
+                      <svg
+                        className='w-6 h-6 text-blue-600'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
+                        />
                       </svg>
                     </div>
                     <h3 className='font-semibold text-[#30313D]'>Sales Automation</h3>
                   </div>
-                  <p className='text-[#67768c] text-sm'>Lead qualification and nurturing systems that convert prospects automatically</p>
+                  <p className='text-[#67768c] text-sm'>
+                    Lead qualification and nurturing systems that convert prospects automatically
+                  </p>
                 </div>
 
-                <div className='bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow'>
+                <div className='bg-white hover:shadow-lg p-6 border border-gray-200 rounded-xl transition-shadow'>
                   <div className='flex items-center mb-4'>
-                    <div className='bg-purple-100 p-3 rounded-lg mr-4'>
-                      <svg className='w-6 h-6 text-purple-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' />
+                    <div className='bg-purple-100 mr-4 p-3 rounded-lg'>
+                      <svg
+                        className='w-6 h-6 text-purple-600'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
+                        />
                       </svg>
                     </div>
                     <h3 className='font-semibold text-[#30313D]'>Data Analytics</h3>
                   </div>
-                  <p className='text-[#67768c] text-sm'>Automated insights and reporting agents that analyze your business data</p>
+                  <p className='text-[#67768c] text-sm'>
+                    Automated insights and reporting agents that analyze your business data
+                  </p>
                 </div>
 
-                <div className='bg-white p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow'>
+                <div className='bg-white hover:shadow-lg p-6 border border-gray-200 rounded-xl transition-shadow'>
                   <div className='flex items-center mb-4'>
-                    <div className='bg-orange-100 p-3 rounded-lg mr-4'>
-                      <svg className='w-6 h-6 text-orange-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' />
-                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
+                    <div className='bg-orange-100 mr-4 p-3 rounded-lg'>
+                      <svg
+                        className='w-6 h-6 text-orange-600'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
+                        />
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
+                        />
                       </svg>
                     </div>
                     <h3 className='font-semibold text-[#30313D]'>Process Optimization</h3>
                   </div>
-                  <p className='text-[#67768c] text-sm'>Custom workflow automation solutions that streamline your operations</p>
+                  <p className='text-[#67768c] text-sm'>
+                    Custom workflow automation solutions that streamline your operations
+                  </p>
                 </div>
               </div>
             </div>
@@ -808,118 +875,136 @@ export default function Home() {
           </RevealAnimation>
           <div className='space-y-6'>
             <RevealAnimation delay={0.2}>
-              <div className='relative bg-gradient-to-br from-white to-blue-50/50 p-6 border border-blue-200/60 shadow-lg rounded-xl overflow-hidden'>
-                <div className='absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-100/20 to-transparent rounded-full -mr-12 -mt-12'></div>
-                <div className='relative z-10'>
+              <div className='relative bg-gradient-to-br from-white to-blue-50/50 shadow-lg p-6 border border-blue-200/60 rounded-xl overflow-hidden'>
+                <div className='top-0 right-0 absolute bg-gradient-to-br from-blue-100/20 to-transparent -mt-12 -mr-12 rounded-full w-24 h-24'></div>
+                <div className='z-10 relative'>
                   <div className='flex items-start gap-4'>
                     <div className='relative flex-shrink-0'>
-                      <div className='bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12 flex items-center justify-center'>
+                      <div className='flex justify-center items-center bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12'>
                         <span className='font-bold text-white text-sm'>AP</span>
                       </div>
                     </div>
-                    
+
                     <div className='flex-1 min-w-0'>
-                      <div className='flex items-center justify-between mb-2'>
+                      <div className='flex justify-between items-center mb-2'>
                         <div>
                           <div className='font-bold text-[#30313D]'>Anthony Privitelli</div>
                           <div className='text-[#67768c] text-sm'>Founder, Creator Testing</div>
                         </div>
                         <div className='flex items-center text-yellow-500'>
                           {'★★★★★'.split('').map((star, i) => (
-                            <span key={i} className='text-sm'>{star}</span>
+                            <span
+                              key={i}
+                              className='text-sm'
+                            >
+                              {star}
+                            </span>
                           ))}
                         </div>
                       </div>
-                      
-                      <p className='font-medium text-[#30313D] text-base leading-relaxed mb-3'>
-                        "Automated our entire customer onboarding process. What used to take 4-5 hours per client now happens in minutes. I highly recommend having an intro call with the team."
+
+                      <p className='mb-3 font-medium text-[#30313D] text-base leading-relaxed'>
+                        "Automated our entire customer onboarding process. What used to take 4-5 hours per client now
+                        happens in minutes. I highly recommend having an intro call with the team."
                       </p>
-                      
-                      <div className='flex items-center justify-between text-sm'>
-                        <span className='bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium'>
+
+                      <div className='flex justify-between items-center text-sm'>
+                        <span className='bg-green-100 px-2 py-1 rounded-full font-medium text-green-700 text-xs'>
                           Delivered in 3 weeks
                         </span>
-                        <span className='text-[#2c5688] font-medium'>Verified Client</span>
+                        <span className='font-medium text-[#2c5688]'>Verified Client</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </RevealAnimation>
-            
+
             <RevealAnimation delay={0.4}>
-              <div className='relative bg-gradient-to-br from-white to-purple-50/50 p-6 border border-purple-200/60 shadow-lg rounded-xl overflow-hidden'>
-                <div className='absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-100/20 to-transparent rounded-full -mr-12 -mt-12'></div>
-                <div className='relative z-10'>
+              <div className='relative bg-gradient-to-br from-white to-purple-50/50 shadow-lg p-6 border border-purple-200/60 rounded-xl overflow-hidden'>
+                <div className='top-0 right-0 absolute bg-gradient-to-br from-purple-100/20 to-transparent -mt-12 -mr-12 rounded-full w-24 h-24'></div>
+                <div className='z-10 relative'>
                   <div className='flex items-start gap-4'>
                     <div className='relative flex-shrink-0'>
-                      <div className='bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12 flex items-center justify-center'>
+                      <div className='flex justify-center items-center bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12'>
                         <span className='font-bold text-white text-sm'>LR</span>
                       </div>
                     </div>
-                    
+
                     <div className='flex-1 min-w-0'>
-                      <div className='flex items-center justify-between mb-2'>
+                      <div className='flex justify-between items-center mb-2'>
                         <div>
                           <div className='font-bold text-[#30313D]'>Lucas Roussia</div>
                           <div className='text-[#67768c] text-sm'>Founder, Toolpad</div>
                         </div>
                         <div className='flex items-center text-yellow-500'>
                           {'★★★★★'.split('').map((star, i) => (
-                            <span key={i} className='text-sm'>{star}</span>
+                            <span
+                              key={i}
+                              className='text-sm'
+                            >
+                              {star}
+                            </span>
                           ))}
                         </div>
                       </div>
-                      
-                      <p className='font-medium text-[#30313D] text-base leading-relaxed mb-3'>
-                        "Delivered our AI automation in just 3 weeks. The system now handles 80% of our data processing automatically. Communication is smooth and very professional."
+
+                      <p className='mb-3 font-medium text-[#30313D] text-base leading-relaxed'>
+                        "Delivered our AI automation in just 3 weeks. The system now handles 80% of our data processing
+                        automatically. Communication is smooth and very professional."
                       </p>
-                      
-                      <div className='flex items-center justify-between text-sm'>
-                        <span className='bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium'>
+
+                      <div className='flex justify-between items-center text-sm'>
+                        <span className='bg-green-100 px-2 py-1 rounded-full font-medium text-green-700 text-xs'>
                           Delivered in 3 weeks
                         </span>
-                        <span className='text-[#2c5688] font-medium'>Verified Client</span>
+                        <span className='font-medium text-[#2c5688]'>Verified Client</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </RevealAnimation>
-            
+
             <RevealAnimation delay={0.6}>
-              <div className='relative bg-gradient-to-br from-white to-green-50/50 p-6 border border-green-200/60 shadow-lg rounded-xl overflow-hidden'>
-                <div className='absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-green-100/20 to-transparent rounded-full -mr-12 -mt-12'></div>
-                <div className='relative z-10'>
+              <div className='relative bg-gradient-to-br from-white to-green-50/50 shadow-lg p-6 border border-green-200/60 rounded-xl overflow-hidden'>
+                <div className='top-0 right-0 absolute bg-gradient-to-br from-green-100/20 to-transparent -mt-12 -mr-12 rounded-full w-24 h-24'></div>
+                <div className='z-10 relative'>
                   <div className='flex items-start gap-4'>
                     <div className='relative flex-shrink-0'>
-                      <div className='bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12 flex items-center justify-center'>
+                      <div className='flex justify-center items-center bg-gradient-to-br from-[#2c5688] to-[#4f83c7] rounded-full w-12 h-12'>
                         <span className='font-bold text-white text-sm'>LT</span>
                       </div>
                     </div>
-                    
+
                     <div className='flex-1 min-w-0'>
-                      <div className='flex items-center justify-between mb-2'>
+                      <div className='flex justify-between items-center mb-2'>
                         <div>
                           <div className='font-bold text-[#30313D]'>Luke Turvey</div>
                           <div className='text-[#67768c] text-sm'>Founder, Pentest List</div>
                         </div>
                         <div className='flex items-center text-yellow-500'>
                           {'★★★★★'.split('').map((star, i) => (
-                            <span key={i} className='text-sm'>{star}</span>
+                            <span
+                              key={i}
+                              className='text-sm'
+                            >
+                              {star}
+                            </span>
                           ))}
                         </div>
                       </div>
-                      
-                      <p className='font-medium text-[#30313D] text-base leading-relaxed mb-3'>
-                        "Built an AI agent in just 2 weeks with flawless automation. Increased our efficiency by 300% and handles complex security assessments automatically. Outstanding communication!"
+
+                      <p className='mb-3 font-medium text-[#30313D] text-base leading-relaxed'>
+                        "Built an AI agent in just 2 weeks with flawless automation. Increased our efficiency by 300%
+                        and handles complex security assessments automatically. Outstanding communication!"
                       </p>
-                      
-                      <div className='flex items-center justify-between text-sm'>
-                        <span className='bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium'>
+
+                      <div className='flex justify-between items-center text-sm'>
+                        <span className='bg-green-100 px-2 py-1 rounded-full font-medium text-green-700 text-xs'>
                           Delivered in 2 weeks
                         </span>
-                        <span className='text-[#2c5688] font-medium'>Verified Client</span>
+                        <span className='font-medium text-[#2c5688]'>Verified Client</span>
                       </div>
                     </div>
                   </div>
